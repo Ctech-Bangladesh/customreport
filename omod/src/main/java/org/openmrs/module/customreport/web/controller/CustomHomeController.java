@@ -2,7 +2,6 @@ package org.openmrs.module.customreport.web.controller;
 
 import org.openmrs.module.customreport.api.service.CustomReportService;
 import org.openmrs.module.customreport.model.Team;
-import org.openmrs.module.datacollector.api.service.RegCollectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -11,47 +10,23 @@ import java.util.List;
 
 @Controller
 public class CustomHomeController {
-  
-	@Autowired
-	CustomReportService customReportService;
-	
-	@ResponseBody
-	@RequestMapping(value = "module/customreport/greeting", method = RequestMethod.GET)
-	public String greeting() {
-		return customReportService.welCome();
-	}
-	
-	@ResponseBody
-	@RequestMapping(value = "module/customreport/saveTeam", method = RequestMethod.POST)
-	public void saveTeam(@RequestBody Team team) {
-		customReportService.saveTeam(team);
-	}
-	
-	@ResponseBody
-	@RequestMapping(value = "module/customreport/getAllTeam", method = RequestMethod.GET)
-	public List<Team> getAllTeam() {
-		return customReportService.getAllTeam();
-	}
-    @Autowired
-    private RegCollectionService regCollectionService;
-
     @Autowired
     CustomReportService customReportService;
 
     @ResponseBody
-    @RequestMapping(value = "module/customreport/greeting.form", method = RequestMethod.GET)
+    @RequestMapping(value = "module/customreport/greeting", method = RequestMethod.GET)
     public String greeting() {
         return customReportService.welCome();
     }
 
     @ResponseBody
-    @RequestMapping(value = "module/customreport/saveTeam.form", method = RequestMethod.POST)
+    @RequestMapping(value = "module/customreport/saveTeam", method = RequestMethod.POST)
     public void saveTeam(@RequestBody Team team) {
         customReportService.saveTeam(team);
     }
 
     @ResponseBody
-    @RequestMapping(value = "module/customreport/getAllTeam.form", method = RequestMethod.GET)
+    @RequestMapping(value = "module/customreport/getAllTeam", method = RequestMethod.GET)
     public List<Team> getAllTeam() {
         return customReportService.getAllTeam();
     }
