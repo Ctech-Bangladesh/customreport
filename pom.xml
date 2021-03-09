@@ -64,5 +64,10 @@
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.12.1</version>
+        </dependency>
     </dependencies>
 </project>

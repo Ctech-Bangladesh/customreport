@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.openmrs.module.customreport.model">
+    <class name="RegistrationCollection"
+           table="registration_collection">
+        <id name="id" type="java.lang.String" column="id" unsaved-value="0">
+        </id>
+        <property name="collectionDate" column="date"/>
+        <property name="opdPatient" column="opd_patient"/>
+        <property name="emergencyPatient" column="emergency_patient"/>
+        <property name="malePatient" column="male"/>
+        <property name="femalePatient" column="female"/>
+        <property name="freePatient" column="free_patient"/>
+        <property name="paidPatient" column="paid_patient"/>
+        <property name="totalPatient" column="total"/>
+        <property name="totalCollection" column="total_collection"/>
+    </class>
+</hibernate-mapping>

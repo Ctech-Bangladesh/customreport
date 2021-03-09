@@ -29,12 +29,6 @@
             <scope>provided</scope>
             <classifier>tests</classifier>
         </dependency>
-        <!--Added DataCollector Api-->
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>datacollector-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>

@@ -85,6 +85,7 @@
     -->
     <!-- /Servlets -->
     <mappingFiles>
+        RegistrationCollection.hbm.xml
         Team.hbm.xml
     </mappingFiles>
     <!-- Internationalization -->

@@ -3,6 +3,7 @@ package org.openmrs.module.customreport.api.impl.doaImpl;
 import org.hibernate.SessionFactory;
 import org.openmrs.api.db.hibernate.DbSessionFactory;
 import org.openmrs.module.customreport.api.dao.CustomReportDao;
+import org.openmrs.module.customreport.model.RegistrationCollection;
 import org.openmrs.module.customreport.model.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -31,5 +32,10 @@ public class CustomReportDaoImpl implements CustomReportDao {
 	@Transactional
 	public void saveTeam(Team team) {
 		sessionFactory.getCurrentSession().save(team);
+	}
+	
+	@Override
+	public List<RegistrationCollection> getAllRegCollection() {
+		return sessionFactory.getCurrentSession().createCriteria(RegistrationCollection.class).list();
 	}
 }
